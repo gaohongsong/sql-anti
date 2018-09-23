@@ -1,0 +1,13 @@
+{% load mptt_tags %}
+{% recursetree nodes %}
+<li>
+    {% if node.is_leaf_node %}
+    <span style="color: red;">{{ node.title }}</span>
+    {% else %}
+        {{ node.title }}
+        <ul>
+            {{ children }}
+        </ul>
+    {% endif %}
+</li>
+{% endrecursetree %}

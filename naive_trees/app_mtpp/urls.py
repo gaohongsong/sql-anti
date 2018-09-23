@@ -19,4 +19,5 @@ from app_mtpp import views
 
 urlpatterns = [
     url(r'^unorderd_list/$', views.unordered_list),
+    url(r'^mptt_list/$', views.mptt_list),
 ]
