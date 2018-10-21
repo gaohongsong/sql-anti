@@ -1,6 +1,6 @@
 from django.shortcuts import render, render_to_response
 
-from app_mtpp.models import Food, MpttFood
+from naive_trees.models import Food, MpttFood
 
 
 def display(foods):
@@ -24,11 +24,10 @@ def unordered_list(request):
 
     var = display(foods)
 
-    return render_to_response('app_mtpp/unordered_list.html', {'var': var})
+    return render_to_response('naive_trees/unordered_list.html', {'var': var})
 
 
 def mptt_list(request):
-
     nodes = MpttFood.objects.all()
 
-    return render_to_response('app_mtpp/mptt_list.html', {'nodes': nodes})
+    return render_to_response('naive_trees/mptt_list.html', {'nodes': nodes})

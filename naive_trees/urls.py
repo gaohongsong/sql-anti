@@ -15,7 +15,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from app_mtpp import views
+from naive_trees import views
 
 urlpatterns = [
     url(r'^unorderd_list/$', views.unordered_list),

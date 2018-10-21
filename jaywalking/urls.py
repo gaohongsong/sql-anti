@@ -1,4 +1,4 @@
-"""sql_anti URL Configuration
+"""naive_trees URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
@@ -15,7 +15,8 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from jaywalking import views
+
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^naive_trees/', include('naive_trees.urls')),
+    url(r'^index/$', views.index),
 ]
